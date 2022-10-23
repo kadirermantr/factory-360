@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Heading -->
-    @section('title', 'Page Title')
+    @section('title', 'Dashboard')
 
     <p class="mb-4">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius enim hic laboriosam libero magnam numquam omnis perspiciatis, quam suscipit.
