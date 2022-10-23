@@ -15,6 +15,18 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('company.index')" :active="request()->routeIs('company.index')">
+                        {{ __('Company') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('employee.index')" :active="request()->routeIs('employee.index')">
+                        {{ __('Employee') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('industry.index')" :active="request()->routeIs('industry.index')">
+                        {{ __('Industry') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -41,7 +53,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Logout') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
