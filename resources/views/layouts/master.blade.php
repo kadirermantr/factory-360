@@ -29,5 +29,9 @@
     </a>
 
     @include('layouts.js')
+
+    @if(isset($dataTable))
+        @include('layouts.table-js')
+    @endif
 </body>
 </html>
