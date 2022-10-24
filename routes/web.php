@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +19,5 @@ Route::view('/', 'auth.login')->middleware('guest');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::resource('user', UserController::class);
 });
