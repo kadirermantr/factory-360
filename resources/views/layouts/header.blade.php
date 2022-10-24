@@ -14,3 +14,8 @@
 
 <!-- Custom styles for this template-->
 <link href="{{ url('css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+@if(isset($dataTable))
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+@endif
