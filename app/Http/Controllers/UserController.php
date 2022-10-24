@@ -41,9 +41,11 @@ class UserController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
-        $user = User::create($request->validated());
+        User::create($request->validated());
 
-        return $this->show($user);
+        toastr()->success('User created');
+
+        return redirect()->route('user.index');
     }
 
     /**
