@@ -1,10 +1,35 @@
 @extends('layouts.master')
 
 @section('content')
-    <!-- Page Heading -->
     @section('title', 'Industries')
 
     <p class="mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius enim hic laboriosam libero magnam numquam omnis perspiciatis, quam suscipit.
+        <a href="{{ route('industry.create') }}">» Create an industry</a>
     </p>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    @foreach($industries as $industry)
+                        <tr>
+                            <td><a href="{{ route('industry.show', $industry->id) }}">{{ $industry->name }}</a></td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @php
+        $dataTable = true;
+    @endphp
 @endsection
