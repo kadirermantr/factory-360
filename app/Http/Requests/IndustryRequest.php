@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class IndustryRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class IndustryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|unique:industries,name',
+            'name' => ['required', Rule::unique('industries')->ignore($this->industry)],
         ];
     }
 }
