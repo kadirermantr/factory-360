@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
+use App\Models\Employee;
+use App\Models\User;
 use Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -60,7 +62,8 @@ class CompanyController extends Controller
     public function show(Company $company)
     {
         return view('company.show', [
-            'company' => $company
+            'company' => $company,
+            'employees' => Employee::query()->where('company_id', $company->id)->get(),
         ]);
     }
 
