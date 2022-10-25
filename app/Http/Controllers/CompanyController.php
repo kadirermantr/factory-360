@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
 use Auth;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
@@ -19,7 +18,7 @@ class CompanyController extends Controller
     public function index()
     {
         return view('company.index', [
-            'companies' => Company::query()->with('user')->get(),
+            'companies' => Company::with('user')->get(),
         ]);
     }
 
