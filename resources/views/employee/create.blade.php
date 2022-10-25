@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="col-sm-4">
-                        <input type="date" class="form-control" name="employment_date" id="employment_date" value="{{ now()->format('Y-m-d') }}">
+                        <input type="date" class="form-control" name="employment_date" id="employment_date" value="{{ old('employment_date') ?? now()->format('Y-m-d') }}">
                     </div>
 
                     @error('employment_date')
