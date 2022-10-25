@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
-use App\Models\Company;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -30,9 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create', [
-            'companies' => Company::query()->select('id', 'name')->get() ?? null,
-        ]);
+        return view('user.create');
     }
 
     /**
