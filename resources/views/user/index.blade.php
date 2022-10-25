@@ -4,7 +4,7 @@
     @section('title', 'Users')
 
     <p class="mb-4">
-        <a href="{{ route('user.create') }}">» Create a user</a>
+        <a href="{{ route('user.create') }}">» Create an user</a>
     </p>
 
     <div class="card shadow mb-4">
