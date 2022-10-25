@@ -69,9 +69,6 @@ class IndustryController extends Controller
      */
     public function update(IndustryRequest $request, Industry $industry)
     {
-        if ($request->get('delete'))
-            return $this->destroy($industry);
-
         $industry->update($request->validated());
 
         toastr()->success('Industry updated');

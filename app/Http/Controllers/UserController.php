@@ -72,9 +72,6 @@ class UserController extends Controller
      */
     public function update(UserUpdateRequest $request, User $user)
     {
-        if ($request->get('delete'))
-            return $this->destroy($user);
-
         $password = $request->get('password') ? bcrypt($request->get('password')) : $user->password;
 
         $user->update(array_merge($request->validated(), ['password' => $password]));

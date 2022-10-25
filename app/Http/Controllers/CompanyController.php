@@ -74,9 +74,6 @@ class CompanyController extends Controller
      */
     public function update(CompanyRequest $request, Company $company)
     {
-        if ($request->get('delete'))
-            return $this->destroy($company);
-
         $company->update($request->validated());
 
         toastr()->success('Company updated');

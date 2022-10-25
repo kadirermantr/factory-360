@@ -28,9 +28,14 @@
 
                     <div class="col-sm-4">
                         <button type="submit" class="btn btn-primary" name="edit" value="edit">Edit</button>
-                        <button type="submit" class="btn btn-danger" name="delete" value="delete">Delete</button>
+                        <a onclick="document.getElementById('deleteForm').submit()" class="btn btn-danger" name="delete" value="delete">Delete</a>
                     </div>
                 </div>
+            </form>
+
+            <form action="{{ route('company.destroy', $company) }}" method="POST" id="deleteForm">
+                @csrf
+                @method('DELETE')
             </form>
         </div>
     </div>
