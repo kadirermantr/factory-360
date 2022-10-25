@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\IndustryRequest;
 use App\Models\Industry;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class IndustryController extends Controller
