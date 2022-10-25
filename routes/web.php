@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('user', UserController::class);
     Route::resource('company', CompanyController::class);
     Route::resource('industry', IndustryController::class);
+    Route::resource('employee', EmployeeController::class);
 });
