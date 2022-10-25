@@ -4,6 +4,10 @@
     @section('title', 'Edit User')
 
     <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Details</h6>
+        </div>
+
         <div class="card-body">
             <form action="{{ route('user.update', $user->id) }}" method="POST">
                 @csrf
