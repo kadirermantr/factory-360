@@ -9,6 +9,9 @@
 
     <div class="card shadow mb-4">
         <div class="card-body">
+            @if($users->isEmpty())
+                Data not found!
+            @else
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -30,6 +33,7 @@
                     </tbody>
                 </table>
             </div>
+            @endif
         </div>
     </div>
 

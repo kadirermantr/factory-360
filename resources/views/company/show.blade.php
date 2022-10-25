@@ -50,7 +50,7 @@
         </div>
 
         <div class="card-body">
-            @if ($employees->isEmpty())
+            @if($employees->isEmpty())
                 Data not found!
             @else
                 <div class="table-responsive">
