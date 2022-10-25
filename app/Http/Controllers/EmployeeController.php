@@ -19,7 +19,7 @@ class EmployeeController extends Controller
     public function index()
     {
         return view('employee.index', [
-            'employees' => Employee::with('company')->get(),
+            'employees' => Employee::with('company')->has('company')->get(),
         ]);
     }
 
