@@ -59,7 +59,7 @@
                         <select class="form-select form-control" name="company_id">
                             <option selected>Select</option>
                             @foreach($companies as $company)
-                                <option value="{{ $company->id }}" @if (old('company_id') == $company->id) selected="selected" @endif>{{ $company->name }}</option>
+                                <option value="{{ $company->id }}" @if (old('company_id') == $company->id) selected @endif>{{ $company->name }}</option>
                             @endforeach
                         </select>
                     </div>
