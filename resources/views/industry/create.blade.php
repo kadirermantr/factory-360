@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Create User')
+    @section('title', 'Create Industry')
     <div class="card shadow mb-4">
 
         <div class="card-body">
