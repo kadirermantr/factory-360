@@ -28,6 +28,24 @@
                 </div>
 
                 <div class="row mb-3">
+                    <div class="col-sm-2">
+                        <label for="name" class="col-form-label">Industry</label>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <select class="form-select form-control" multiple name="industry_ids[]">
+                            @foreach($industries as $industry)
+                                <option value="{{ $industry->id }}" @if ($company->industries->contains('industry_id', $industry->id)) selected @endif>{{ $industry->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    @error('industry_ids')
+                    <span class="text-sm text-danger space-y-1 mt-2">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="row mb-3">
                     <div class="col-sm-2"></div>
 
                     <div class="col-sm-4">
