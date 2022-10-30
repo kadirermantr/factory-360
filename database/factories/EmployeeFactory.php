@@ -25,7 +25,7 @@ class EmployeeFactory extends Factory
             'position' => fake()->text(10),
             'gender' => fake()->randomElement(EmployeeGenders::values()),
             'status' => fake()->randomElement(EmployeeStatus::values()),
-            'company_id' => fake()->randomNumber(1, 5),
+            'company_id' => fake()->numberBetween(1, 5),
             'phone' => fake()->phoneNumber,
             'email' => fake()->unique()->safeEmail(),
             'employment_date' => fake()->dateTimeBetween('-10 years'),
