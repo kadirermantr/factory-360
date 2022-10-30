@@ -18,4 +18,5 @@
 ## Example User
 
 Email: `hr@girift.tech`
+
 Password: `p@ssw0rd`
