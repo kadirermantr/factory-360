@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Employee;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +19,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             IndustrySeeder::class,
         ]);
+
+        Employee::factory(50)->create();
     }
 }
