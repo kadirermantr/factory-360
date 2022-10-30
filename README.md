@@ -17,6 +17,6 @@
 
 ## Example User
 
-Email: `hr@girift.tech`
+**Email:** `hr@girift.tech`
 
-Password: `p@ssw0rd`
+**Password:** `p@ssw0rd`
