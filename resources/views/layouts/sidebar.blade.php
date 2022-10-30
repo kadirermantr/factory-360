@@ -34,16 +34,16 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('employee.index') }}">
-            <i class="fas fa-fw fa-user"></i>
-            <span>Employees</span>
+        <a class="nav-link" href="{{ route('industry.index') }}">
+            <i class="fas fa-fw fa-industry"></i>
+            <span>Industries</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('industry.index') }}">
-            <i class="fas fa-fw fa-industry"></i>
-            <span>Industries</span>
+        <a class="nav-link" href="{{ route('employee.index') }}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Employees</span>
         </a>
     </li>
 
