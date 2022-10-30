@@ -1,10 +1,30 @@
 @extends('layouts.master')
 
 @section('content')
-    <!-- Page Heading -->
     @section('title', 'Dashboard')
 
-    <p class="mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eius enim hic laboriosam libero magnam numquam omnis perspiciatis, quam suscipit.
-    </p>
+
+    <div class="row">
+        @foreach($statistics as $statistic)
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 -">{{ $statistic['title'] }}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $statistic['count'] }}</div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Welcome!</h6>
+        </div>
+        <div class="card-body">
+            Thanks to this dashboard, you can check everything about the company.
+        </div>
+    </div>
+
+
 @endsection
