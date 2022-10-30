@@ -18,12 +18,27 @@ class CompanySeeder extends Seeder
 
         Company::insert([
             [
-                'name' => 'Dominos',
+                'name' => 'Hepsiburada',
                 'user_id' => 1,
                 'created_at' => $date,
             ],
             [
                 'name' => 'Trendyol',
+                'user_id' => 2,
+                'created_at' => $date,
+            ],
+            [
+                'name' => 'Burger King',
+                'user_id' => 3,
+                'created_at' => $date,
+            ],
+            [
+                'name' => 'Koton',
+                'user_id' => 1,
+                'created_at' => $date,
+            ],
+            [
+                'name' => 'Paşabahçe',
                 'user_id' => 2,
                 'created_at' => $date,
             ],
