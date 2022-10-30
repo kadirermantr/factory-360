@@ -13,3 +13,9 @@
 2. `composer install`
 3. `./vendor/bin/sail up -d`
 4. `./vendor/bin/sail artisan migrate --seed`
+
+
+## Example User
+
+Email: `hr@girift.tech`
+Password: `p@ssw0rd`
