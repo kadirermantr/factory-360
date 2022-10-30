@@ -26,6 +26,7 @@ class CompanyRequest extends FormRequest
     {
         return [
             'name' => ['required', Rule::unique('companies')->ignore($this->company)],
+            'industry_ids' => 'nullable|exists:industries,id',
         ];
     }
 }

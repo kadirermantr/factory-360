@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
+use App\Models\CompanyIndustries;
 use App\Models\Employee;
-use App\Models\User;
+use App\Models\Industry;
 use Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -64,6 +65,7 @@ class CompanyController extends Controller
         return view('company.show', [
             'company' => $company,
             'employees' => Employee::query()->where('company_id', $company->id)->get(),
+            'industries' => Industry::all(),
         ]);
     }
 
@@ -77,6 +79,26 @@ class CompanyController extends Controller
     public function update(CompanyRequest $request, Company $company)
     {
         $company->update($request->validated());
+
+        if ($request->industry_ids) {
+            CompanyIndustries::where('company_id', $company->id)->delete();
+
+            foreach ($request->industry_ids as $industryId) {
+                $companyIndustry = CompanyIndustries::where([
+                    'company_id' => $company->id,
+                    'industry_id' => $industryId,
+                ])->get();
+
+                if ($companyIndustry->count() == 0) {
+                    CompanyIndustries::create([
+                        'company_id' => $company->id,
+                        'industry_id' => $industryId,
+                    ]);
+                }
+            }
+        } else {
+            CompanyIndustries::where('company_id', $company->id)->delete();
+        }
 
         toastr()->success('Company updated');
 
