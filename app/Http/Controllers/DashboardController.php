@@ -6,8 +6,6 @@ use App\Models\Company;
 use App\Models\Employee;
 use App\Models\Industry;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
 
 class DashboardController extends Controller
@@ -27,19 +25,5 @@ class DashboardController extends Controller
                 ['title' => __('terms.employees'), 'count' => Employee::count('id')],
             ]
         ]);
-    }
-
-    /**
-     * Set language.
-     *
-     * @param $locale
-     * @return RedirectResponse
-     */
-    public function lang($locale)
-    {
-        App::setLocale($locale);
-        session()->put('locale', $locale);
-
-        return redirect()->back();
     }
 }
