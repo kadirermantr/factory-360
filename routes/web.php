@@ -24,6 +24,8 @@ Route::view('/', 'auth.login')->middleware('guest');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('lang/{locale}', [DashboardController::class, 'lang'])->name('language');
+
     Route::resource('user', UserController::class);
     Route::resource('company', CompanyController::class);
     Route::resource('industry', IndustryController::class);
