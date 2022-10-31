@@ -4,6 +4,22 @@
             <a href="/">
                 <img src="{{ 'img/rating.png' }}">
             </a>
+
+            <div class="flex items-center justify-center mt-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item inline-flex">
+                        <a class="nav-link" href="{{ route('language', 'tr') }}" alt="Turkish">
+                            <img src="{{ url('img/turkish-flag.png') }}">
+                        </a>
+                    </li>
+
+                    <li class="inli nav-item inline-flex">
+                        <a class="nav-link" href="{{ route('language', 'en') }}" alt="English">
+                            <img src="{{ url('img/english-flag.png') }}">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </x-slot>
 
         <!-- Session Status -->
