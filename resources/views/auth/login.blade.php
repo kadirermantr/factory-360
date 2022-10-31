@@ -13,7 +13,7 @@
             @csrf
 
             <div>
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder="{{ __('terms.email') }}" required autofocus />
 
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
@@ -23,21 +23,21 @@
                               type="password"
                               name="password"
                               required autocomplete="current-password"
-                              placeholder="Password" />
+                              placeholder="{{ __('terms.password') }}" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
 
             <div class="flex items-center justify-center mt-4">
                 <x-primary-button class="ml-3">
-                    {{ __('Login') }}
+                    {{ __('auth.login') }}
                 </x-primary-button>
             </div>
 
             <div class="flex items-center mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        » {{ __('Forgot password?') }}
+                        » {{ __('auth.forgot_password') }}
                     </a>
                 @endif
             </div>
