@@ -13,7 +13,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span>{{ trans('terms.dashboard') }}</span>
         </a>
     </li>
 
@@ -22,28 +22,28 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('user.index') }}">
             <i class="fas fa-fw fa-users"></i>
-            <span>Users</span>
+            <span>{{ __('terms.users') }}</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('company.index') }}">
             <i class="fas fa-fw fa-building"></i>
-            <span>Companies</span>
+            <span>{{ __('terms.companies') }}</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('industry.index') }}">
             <i class="fas fa-fw fa-industry"></i>
-            <span>Industries</span>
+            <span>{{ __('terms.industries') }}</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('employee.index') }}">
             <i class="fas fa-fw fa-user"></i>
-            <span>Employees</span>
+            <span>{{ __('terms.employees') }}</span>
         </a>
     </li>
 
