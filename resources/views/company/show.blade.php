@@ -35,7 +35,7 @@
                     <div class="col-sm-4">
                         <select class="form-select form-control" multiple name="industry_ids[]">
                             @foreach($industries as $industry)
-                                <option value="{{ $industry->id }}" @if ($company->industries->contains('industry_id', $industry->id)) selected @endif>{{ $industry->name }}</option>
+                                <option value="{{ $industry->id }}" @if ($company->industry->contains('id', $industry->id)) selected @endif>{{ $industry->name }}</option>
                             @endforeach
                         </select>
                     </div>

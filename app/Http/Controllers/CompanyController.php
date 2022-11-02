@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
-use App\Models\CompanyIndustries;
 use App\Models\Employee;
 use App\Models\Industry;
 use Auth;
@@ -80,25 +79,7 @@ class CompanyController extends Controller
     {
         $company->update($request->validated());
 
-        if ($request->industry_ids) {
-            CompanyIndustries::where('company_id', $company->id)->delete();
-
-            foreach ($request->industry_ids as $industryId) {
-                $companyIndustry = CompanyIndustries::where([
-                    'company_id' => $company->id,
-                    'industry_id' => $industryId,
-                ])->get();
-
-                if ($companyIndustry->count() == 0) {
-                    CompanyIndustries::create([
-                        'company_id' => $company->id,
-                        'industry_id' => $industryId,
-                    ]);
-                }
-            }
-        } else {
-            CompanyIndustries::where('company_id', $company->id)->delete();
-        }
+        $company->industry()->sync($request->get('industry_ids'));
 
         toastr()->success('Company updated');
 

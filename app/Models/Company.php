@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Company extends Model
@@ -24,7 +25,7 @@ class Company extends Model
      * @var array
      */
     protected $casts = [
-        'created_at' => 'date:Y-m-d',
+        'create d_at' => 'date:Y-m-d',
         'updated_at' => 'date:Y-m-d',
     ];
 
@@ -33,8 +34,8 @@ class Company extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function industries(): HasMany
+    public function industry(): BelongsToMany
     {
-        return $this->hasMany(CompanyIndustries::class);
+        return $this->BelongsToMany(Industry::class);
     }
 }

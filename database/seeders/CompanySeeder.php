@@ -43,5 +43,9 @@ class CompanySeeder extends Seeder
                 'created_at' => $date,
             ],
         ]);
+
+        foreach (Company::all() as $company) {
+            $company->industry()->sync([rand(1, 10)]);
+        }
     }
 }
