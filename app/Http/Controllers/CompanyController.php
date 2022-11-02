@@ -38,7 +38,7 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param CompanyRequest $request
+     * @param  CompanyRequest  $request
      * @return RedirectResponse
      */
     public function store(CompanyRequest $request)
@@ -46,7 +46,7 @@ class CompanyController extends Controller
         Company::create([
             'name' => $request->name,
             'user_id' => Auth::id(),
-            'created_at' => now()
+            'created_at' => now(),
         ]);
 
         toastr()->success('Company created');
@@ -57,7 +57,7 @@ class CompanyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Company $company
+     * @param  Company  $company
      * @return View
      */
     public function show(Company $company)
@@ -72,8 +72,8 @@ class CompanyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param CompanyRequest $request
-     * @param Company $company
+     * @param  CompanyRequest  $request
+     * @param  Company  $company
      * @return RedirectResponse
      */
     public function update(CompanyRequest $request, Company $company)
@@ -108,7 +108,7 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Company $company
+     * @param  Company  $company
      * @return RedirectResponse
      */
     public function destroy(Company $company)

@@ -24,7 +24,7 @@ require __DIR__.'/auth.php';
 Route::view('/', 'auth.login')->middleware('guest');
 Route::get('lang/{locale}', [HomeController::class, 'lang'])->name('language');
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('user', UserController::class);

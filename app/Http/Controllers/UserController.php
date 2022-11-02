@@ -35,7 +35,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param UserCreateRequest $request
+     * @param  UserCreateRequest  $request
      * @return RedirectResponse
      */
     public function store(UserCreateRequest $request)
@@ -50,21 +50,21 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param User $user
+     * @param  User  $user
      * @return View
      */
     public function show(User $user)
     {
         return view('user.show', [
-            'user' => $user
+            'user' => $user,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param UserUpdateRequest $request
-     * @param User $user
+     * @param  UserUpdateRequest  $request
+     * @param  User  $user
      * @return RedirectResponse
      */
     public function update(UserUpdateRequest $request, User $user)
@@ -81,7 +81,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param User $user
+     * @param  User  $user
      * @return RedirectResponse
      */
     public function destroy(User $user)

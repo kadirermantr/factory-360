@@ -34,7 +34,7 @@ class IndustryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param IndustryRequest $request
+     * @param  IndustryRequest  $request
      * @return RedirectResponse
      */
     public function store(IndustryRequest $request)
@@ -49,21 +49,21 @@ class IndustryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Industry $industry
+     * @param  Industry  $industry
      * @return View
      */
     public function show(Industry $industry)
     {
         return view('industry.show', [
-            'industry' => $industry
+            'industry' => $industry,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param IndustryRequest $request
-     * @param Industry $industry
+     * @param  IndustryRequest  $request
+     * @param  Industry  $industry
      * @return RedirectResponse
      */
     public function update(IndustryRequest $request, Industry $industry)
@@ -78,7 +78,7 @@ class IndustryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Industry $industry
+     * @param  Industry  $industry
      * @return RedirectResponse
      */
     public function destroy(Industry $industry)

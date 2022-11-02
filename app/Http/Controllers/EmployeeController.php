@@ -6,7 +6,6 @@ use App\Http\Requests\EmployeeRequest;
 use App\Models\Company;
 use App\Models\Employee;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class EmployeeController extends Controller
@@ -37,7 +36,6 @@ class EmployeeController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
      */
     public function store(EmployeeRequest $request)
     {
@@ -57,7 +55,7 @@ class EmployeeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Employee $employee
+     * @param  Employee  $employee
      * @return View
      */
     public function show(Employee $employee)
@@ -71,8 +69,8 @@ class EmployeeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param EmployeeRequest $request
-     * @param Employee $employee
+     * @param  EmployeeRequest  $request
+     * @param  Employee  $employee
      * @return RedirectResponse
      */
     public function update(EmployeeRequest $request, Employee $employee)
