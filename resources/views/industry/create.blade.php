@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Create Industry')
+    @section('title', __('terms.create_record', ['attribute' => __('terms.industry')]))
     <div class="card shadow mb-4">
 
         <div class="card-body">
@@ -10,7 +10,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="name" class="col-form-label">Name</label>
+                        <label for="name" class="col-form-label">{{ __('terms.name') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -26,7 +26,7 @@
                     <div class="col-sm-2"></div>
 
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary">Create</button>
+                        <button type="submit" class="btn btn-primary">{{ __('terms.create') }}</button>
                     </div>
                 </div>
             </form>

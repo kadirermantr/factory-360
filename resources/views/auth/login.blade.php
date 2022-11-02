@@ -49,14 +49,6 @@
                     {{ __('auth.login') }}
                 </x-primary-button>
             </div>
-
-            <div class="flex items-center mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        » {{ __('auth.forgot_password') }}
-                    </a>
-                @endif
-            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>

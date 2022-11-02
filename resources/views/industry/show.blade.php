@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Edit Industry')
+    @section('title', __('terms.edit_record', ['attribute' => __('terms.industry')]))
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Details</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{ __('terms.detail') }}</h6>
         </div>
 
         <div class="card-body">
@@ -15,7 +15,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="name" class="col-form-label">Name</label>
+                        <label for="name" class="col-form-label">{{ __('terms.name') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -31,8 +31,8 @@
                     <div class="col-sm-2"></div>
 
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary" name="edit" value="edit">Edit</button>
-                        <a onclick="document.getElementById('deleteForm').submit()" class="btn btn-danger" name="delete" value="delete">Delete</a>
+                        <button type="submit" class="btn btn-primary" name="edit" value="edit">{{ __('terms.edit') }}</button>
+                        <a onclick="document.getElementById('deleteForm').submit()" class="btn btn-danger" name="delete" value="delete">{{ __('terms.delete') }}</a>
                     </div>
                 </div>
             </form>

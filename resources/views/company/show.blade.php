@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Edit Company')
+    @section('title', __('terms.edit_record', ['attribute' => __('terms.company')]))
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Details</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{ __('terms.detail') }}</h6>
         </div>
 
         <div class="card-body">
@@ -15,7 +15,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="name" class="col-form-label">Name</label>
+                        <label for="name" class="col-form-label">{{ __('terms.name') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -29,7 +29,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="name" class="col-form-label">Industry</label>
+                        <label for="name" class="col-form-label">{{ __('terms.industry') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -49,8 +49,8 @@
                     <div class="col-sm-2"></div>
 
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary" name="edit" value="edit">Edit</button>
-                        <a onclick="document.getElementById('deleteForm').submit()" class="btn btn-danger" value="delete">Delete</a>
+                        <button type="submit" class="btn btn-primary" name="edit" value="edit">{{ __('terms.edit') }}</button>
+                        <a onclick="document.getElementById('deleteForm').submit()" class="btn btn-danger" value="delete">{{ __('terms.delete') }}</a>
                     </div>
                 </div>
             </form>
@@ -64,7 +64,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Employees</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{ __('terms.employees') }}</h6>
         </div>
 
         <div class="card-body">
@@ -72,13 +72,13 @@
                 Data not found!
             @else
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTable">
                         <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Status</th>
-                            <th>Employment Date</th>
+                            <th>{{ __('terms.name') }}</th>
+                            <th>{{ __('terms.position') }}</th>
+                            <th>{{ __('terms.status') }}</th>
+                            <th>{{ __('terms.employment_date') }}</th>
                         </tr>
                         </thead>
 

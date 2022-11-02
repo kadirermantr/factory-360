@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Invite Employee')
+    @section('title', __('terms.create_record', ['attribute' => __('terms.employee')]))
     <div class="card shadow mb-4">
 
         <div class="card-body">
@@ -10,7 +10,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="firstname" class="col-form-label">Firstname</label>
+                        <label for="firstname" class="col-form-label">{{ __('terms.firstname') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -24,7 +24,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="lastname" class="col-form-label">Lastname</label>
+                        <label for="lastname" class="col-form-label">{{ __('terms.lastname') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -38,7 +38,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="position" class="col-form-label">Position</label>
+                        <label for="position" class="col-form-label">{{ __('terms.position') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -52,12 +52,12 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="company_id" class="col-form-label">Company</label>
+                        <label for="company_id" class="col-form-label">{{ __('terms.company') }}</label>
                     </div>
 
                     <div class="col-sm-4">
                         <select class="form-select form-control" name="company_id">
-                            <option selected>Select</option>
+                            <option selected>{{ __('terms.select') }}</option>
                             @foreach($companies as $company)
                                 <option value="{{ $company->id }}" @if (old('company_id') == $company->id) selected @endif>{{ $company->name }}</option>
                             @endforeach
@@ -72,7 +72,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="phone" class="col-form-label">Phone</label>
+                        <label for="phone" class="col-form-label">{{ __('terms.phone') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -86,7 +86,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="email" class="col-form-label">Email</label>
+                        <label for="email" class="col-form-label">{{ __('terms.email') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -100,7 +100,7 @@
 
                 <div class="row mb-3">
                     <div class="col-sm-2">
-                        <label for="employment_date" class="col-form-label">Employment date</label>
+                        <label for="employment_date" class="col-form-label">{{ __('terms.employment_date') }}</label>
                     </div>
 
                     <div class="col-sm-4">
@@ -116,7 +116,7 @@
                     <div class="col-sm-2"></div>
 
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary">Invite</button>
+                        <button type="submit" class="btn btn-primary">{{ __('terms.create') }}</button>
                     </div>
                 </div>
             </form>

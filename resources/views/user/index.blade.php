@@ -1,28 +1,30 @@
 @extends('layouts.master')
 
 @section('content')
-    @section('title', 'Users')
+    @section('title', __('terms.users'))
 
     <p class="mb-4">
-        <a href="{{ route('user.create') }}">» Create an user</a>
+        <a href="{{ route('user.create') }}">
+            » {{ __('terms.create_record', ['attribute' => __('terms.user')]) }}
+        </a>
     </p>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Details</h6>
+            <h6 class="m-0 font-weight-bold text-primary">{{ __('terms.detail') }}</h6>
         </div>
 
         <div class="card-body">
             @if($users->isEmpty())
-                Data not found!
+                {{ __('terms.not_found') }}
             @else
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Membership Date</th>
+                        <th>{{ __('terms.name') }}</th>
+                        <th>{{ __('terms.email') }}</th>
+                        <th>{{ __('terms.membership_date') }}</th>
                     </tr>
                     </thead>
 
