@@ -5,6 +5,8 @@
 - **Programming language:** PHP
 - **Framework:** Laravel, Bootstrap
 - **Package:** [toastr](https://github.com/CodeSeven/toastr)
+
+## Other
 - **Theme:** [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)
 - **Available Languages:** English, Turkish
 
