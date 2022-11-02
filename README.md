@@ -4,7 +4,7 @@
 
 - **Programming language:** PHP
 - **Framework:** Laravel, Bootstrap
-- **Package:** [toastr](https://github.com/CodeSeven/toastr)
+- **Package:** [enums](https://github.com/archtechx/enums), [toastr](https://github.com/CodeSeven/toastr)
 
 ## Other
 - **Theme:** [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)
