@@ -41,13 +41,7 @@ class EmployeeController extends Controller
     {
         $employee = Employee::create($request->validated());
 
-        /*
-         *
-
-        if ($request->get('continue')) {
-            return redirect(route('employee.create'))->with('status', 'The employee was invited');
-        }
-         */
+        toastr()->success('Employee created');
 
         return $this->show($employee);
     }
