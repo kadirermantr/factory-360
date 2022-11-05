@@ -43,7 +43,7 @@ class CompanyController extends Controller
     public function store(CompanyRequest $request)
     {
         Company::create([
-            'name' => $request->name,
+            'name' => $request->get('name'),
             'user_id' => Auth::id(),
             'created_at' => now(),
         ]);
