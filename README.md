@@ -1,4 +1,4 @@
-# Grift Assesment
+# Grift Assessment
 
 - **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
