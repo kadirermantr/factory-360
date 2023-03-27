@@ -1,12 +1,8 @@
 # Grift Assesment
 
-## Technologies
-
-- **Programming language:** PHP
+- **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
 - **Package:** [enums](https://github.com/archtechx/enums), [toastr](https://github.com/CodeSeven/toastr)
-
-## Other
 - **Theme:** [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)
 - **Available languages:** English, Turkish
 
