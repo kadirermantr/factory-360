@@ -18,14 +18,14 @@ class EmployeeFactory extends Factory
     public function definition(): array
     {
         return [
-            'firstname' => fake()->firstName(),
-            'lastname' => fake()->lastName(),
+            'firstname' => fake()->firstName,
+            'lastname' => fake()->lastName,
             'position' => fake()->text(10),
             'gender' => fake()->randomElement(EmployeeGenders::values()),
             'status' => fake()->randomElement(EmployeeStatus::values()),
             'company_id' => fake()->numberBetween(1, 5),
             'phone' => fake()->phoneNumber,
-            'email' => fake()->unique()->safeEmail(),
+            'email' => fake()->unique()->safeEmail,
             'employment_date' => fake()->dateTimeBetween('-10 years'),
             'created_at' => now(),
         ];
