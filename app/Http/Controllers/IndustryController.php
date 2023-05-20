@@ -9,34 +9,19 @@ use Illuminate\View\View;
 
 class IndustryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return View
-     */
-    public function index()
+    public function index(): View
     {
         return view('industry.index', [
             'industries' => Industry::all(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return View
-     */
-    public function create()
+    public function create(): View
     {
         return view('industry.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function store(IndustryRequest $request)
+    public function store(IndustryRequest $request): RedirectResponse
     {
         Industry::create($request->validated());
 
@@ -45,24 +30,14 @@ class IndustryController extends Controller
         return redirect()->route('industry.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @return View
-     */
-    public function show(Industry $industry)
+    public function show(Industry $industry): View
     {
         return view('industry.show', [
             'industry' => $industry,
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function update(IndustryRequest $request, Industry $industry)
+    public function update(IndustryRequest $request, Industry $industry): RedirectResponse
     {
         $industry->update($request->validated());
 
@@ -71,12 +46,7 @@ class IndustryController extends Controller
         return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @return RedirectResponse
-     */
-    public function destroy(Industry $industry)
+    public function destroy(Industry $industry): RedirectResponse
     {
         $industry->delete();
 

@@ -10,34 +10,21 @@ use Illuminate\View\View;
 
 class EmployeeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return View
-     */
-    public function index()
+    public function index(): View
     {
         return view('employee.index', [
             'employees' => Employee::with('company')->has('company')->get(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return View
-     */
-    public function create()
+    public function create(): View
     {
         return view('employee.create', [
             'companies' => Company::all('id', 'name'),
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(EmployeeRequest $request)
+    public function store(EmployeeRequest $request): View
     {
         $employee = Employee::create($request->validated());
 
@@ -46,12 +33,7 @@ class EmployeeController extends Controller
         return $this->show($employee);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @return View
-     */
-    public function show(Employee $employee)
+    public function show(Employee $employee): View
     {
         return view('employee.show', [
             'employee' => $employee,
@@ -59,12 +41,7 @@ class EmployeeController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function update(EmployeeRequest $request, Employee $employee)
+    public function update(EmployeeRequest $request, Employee $employee): RedirectResponse
     {
         $employee->update($request->validated());
 

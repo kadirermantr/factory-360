@@ -6,40 +6,25 @@ use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
 use App\Models\Employee;
 use App\Models\Industry;
-use Auth;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class CompanyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return View
-     */
-    public function index()
+    public function index(): View
     {
         return view('company.index', [
             'companies' => Company::with('user')->has('user')->get(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return View
-     */
-    public function create()
+    public function create(): View
     {
         return view('company.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function store(CompanyRequest $request)
+    public function store(CompanyRequest $request): RedirectResponse
     {
         Company::create([
             'name' => $request->get('name'),
@@ -52,12 +37,7 @@ class CompanyController extends Controller
         return redirect()->route('company.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @return View
-     */
-    public function show(Company $company)
+    public function show(Company $company): View
     {
         return view('company.show', [
             'company' => $company,
@@ -66,12 +46,7 @@ class CompanyController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function update(CompanyRequest $request, Company $company)
+    public function update(CompanyRequest $request, Company $company): RedirectResponse
     {
         $company->update($request->validated());
 
@@ -82,12 +57,7 @@ class CompanyController extends Controller
         return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @return RedirectResponse
-     */
-    public function destroy(Company $company)
+    public function destroy(Company $company): RedirectResponse
     {
         $company->delete();
 

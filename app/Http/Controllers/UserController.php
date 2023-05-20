@@ -10,34 +10,19 @@ use Illuminate\View\View;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return View
-     */
-    public function index()
+    public function index(): View
     {
         return view('user.index', [
             'users' => User::all(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return View
-     */
-    public function create()
+    public function create(): View
     {
         return view('user.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function store(UserCreateRequest $request)
+    public function store(UserCreateRequest $request): RedirectResponse
     {
         User::create($request->validated());
 
@@ -46,24 +31,14 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @return View
-     */
-    public function show(User $user)
+    public function show(User $user): View
     {
         return view('user.show', [
             'user' => $user,
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @return RedirectResponse
-     */
-    public function update(UserUpdateRequest $request, User $user)
+    public function update(UserUpdateRequest $request, User $user): RedirectResponse
     {
         $password = $request->get('password') ? bcrypt($request->get('password')) : $user->password;
 
@@ -74,12 +49,7 @@ class UserController extends Controller
         return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @return RedirectResponse
-     */
-    public function destroy(User $user)
+    public function destroy(User $user): RedirectResponse
     {
         $user->delete();
 
