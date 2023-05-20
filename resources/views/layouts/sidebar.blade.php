@@ -13,7 +13,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>{{ trans('terms.dashboard') }}</span>
+            <span>{{ __('terms.dashboard') }}</span>
         </a>
     </li>
 
