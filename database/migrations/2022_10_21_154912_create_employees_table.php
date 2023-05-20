@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('position')->nullable();
-            $table->enum('gender', EmployeeGenders::values())->nullable();
-            $table->enum('status', EmployeeStatus::values())->default(EmployeeStatus::INVITED());
+            $table->string('gender')->nullable();
+            $table->string('status')->default((EmployeeStatus::INVITED)->name);
             $table->foreignIdFor(Company::class);
             $table->string('phone')->unique()->nullable();
             $table->string('email')->unique();
