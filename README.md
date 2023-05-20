@@ -2,7 +2,7 @@
 
 - **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
-- **Package: [toastr](https://github.com/CodeSeven/toastr)
+- **Package:** [toastr](https://github.com/CodeSeven/toastr)
 - **Theme:** [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)
 - **Available languages:** English, German, Turkish
 
@@ -18,5 +18,4 @@ composer install
 ## Example User
 
 **Email:** `test@test.com`
-
 **Password:** `password`
