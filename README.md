@@ -15,9 +15,8 @@ composer install
 ./vendor/bin/sail artisan migrate --seed
 ```
 
-
 ## Example User
 
-**Email:** `hr@girift.tech`
+**Email:** `test@test.com`
 
 **Password:** `p@ssw0rd`
