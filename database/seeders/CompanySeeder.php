@@ -9,40 +9,10 @@ class CompanySeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $date = now();
-
-        Company::insert([
-            [
-                'name' => 'Hepsiburada',
-                'user_id' => 1,
-                'created_at' => $date,
-            ],
-            [
-                'name' => 'Trendyol',
-                'user_id' => 2,
-                'created_at' => $date,
-            ],
-            [
-                'name' => 'Burger King',
-                'user_id' => 3,
-                'created_at' => $date,
-            ],
-            [
-                'name' => 'Koton',
-                'user_id' => 1,
-                'created_at' => $date,
-            ],
-            [
-                'name' => 'Paşabahçe',
-                'user_id' => 2,
-                'created_at' => $date,
-            ],
-        ]);
+        Company::factory(5)->create();
 
         foreach (Company::all() as $company) {
             $company->industry()->sync([rand(1, 10)]);

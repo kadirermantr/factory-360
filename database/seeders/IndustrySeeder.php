@@ -14,17 +14,6 @@ class IndustrySeeder extends Seeder
      */
     public function run()
     {
-        Industry::insert([
-            ['name' => 'Building'],
-            ['name' => 'Steel'],
-            ['name' => 'Commerce'],
-            ['name' => 'Food'],
-            ['name' => 'Glass'],
-            ['name' => 'Hotels'],
-            ['name' => 'Media'],
-            ['name' => 'Technology'],
-            ['name' => 'Textile'],
-            ['name' => 'Transport'],
-        ]);
+        Industry::factory(10)->create();
     }
 }
