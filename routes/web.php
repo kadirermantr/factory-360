@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
 
-Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('language');
+Route::get('lang/{lang}', [LanguageController::class, 'switch'])->name('language');
 
 Route::middleware('guest')->group(function () {
     Route::view('/', 'auth.login');

@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\App;
 
 class LanguageController extends Controller
 {
-    /**
-     * Set language.
-     *
-     * @return RedirectResponse
-     */
-    public function switch($locale)
+    public function switch(string $language): RedirectResponse
     {
-        App::setLocale($locale);
-
-        session()->put('locale', $locale);
+        if ($this->isLanguageSupported($language)) {
+            session()->put('lang', $language);
+        }
 
         return redirect()->back();
+    }
+
+    public function isLanguageSupported(string $language): bool
+    {
+        return array_key_exists($language, config('app.languages'));
     }
 }
