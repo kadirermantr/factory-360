@@ -3,8 +3,8 @@
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 

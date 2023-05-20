@@ -49,7 +49,6 @@ class EmployeeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Employee  $employee
      * @return View
      */
     public function show(Employee $employee)
@@ -63,8 +62,6 @@ class EmployeeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  EmployeeRequest  $request
-     * @param  Employee  $employee
      * @return RedirectResponse
      */
     public function update(EmployeeRequest $request, Employee $employee)

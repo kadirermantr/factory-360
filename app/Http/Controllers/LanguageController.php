@@ -10,7 +10,6 @@ class LanguageController extends Controller
     /**
      * Set language.
      *
-     * @param $locale
      * @return RedirectResponse
      */
     public function switch($locale)

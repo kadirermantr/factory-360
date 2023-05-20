@@ -37,7 +37,6 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  CompanyRequest  $request
      * @return RedirectResponse
      */
     public function store(CompanyRequest $request)
@@ -56,7 +55,6 @@ class CompanyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Company  $company
      * @return View
      */
     public function show(Company $company)
@@ -71,8 +69,6 @@ class CompanyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  CompanyRequest  $request
-     * @param  Company  $company
      * @return RedirectResponse
      */
     public function update(CompanyRequest $request, Company $company)
@@ -89,7 +85,6 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Company  $company
      * @return RedirectResponse
      */
     public function destroy(Company $company)
