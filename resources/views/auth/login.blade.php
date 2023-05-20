@@ -7,23 +7,13 @@
 
             <div class="flex items-center justify-center mt-4">
                 <ul class="navbar-nav">
-                    <li class="nav-item inline-flex">
-                        <a class="nav-link" href="{{ route('language', 'de') }}" alt="German">
-                            <img src="{{ url('img/german-flag.png') }}">
-                        </a>
-                    </li>
-
-                    <li class="nav-item inline-flex">
-                        <a class="nav-link" href="{{ route('language', 'tr') }}" alt="Turkish">
-                            <img src="{{ url('img/turkish-flag.png') }}">
-                        </a>
-                    </li>
-
-                    <li class="inli nav-item inline-flex">
-                        <a class="nav-link" href="{{ route('language', 'en') }}" alt="English">
-                            <img src="{{ url('img/english-flag.png') }}">
-                        </a>
-                    </li>
+                    @foreach(config('app.languages') as $language => $name)
+                        <li class="nav-item inline-flex">
+                            <a class="nav-link" href="{{ route('language', $language) }}">
+                                <img src="{{ asset("img/flag-$language.png") }}" alt="{{ $name }}">
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </x-slot>

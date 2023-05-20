@@ -28,23 +28,13 @@
             </div>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('language', 'de') }}" alt="German">
-                <img src="{{ url('img/german-flag.png') }}">
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('language', 'tr') }}" alt="Turkish">
-                <img src="{{ url('img/turkish-flag.png') }}">
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('language', 'en') }}" alt="English">
-                <img src="{{ url('img/english-flag.png') }}">
-            </a>
-        </li>
+        @foreach(config('app.languages') as $language => $name)
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('language', $language) }}">
+                    <img src="{{ asset("img/flag-$language.png") }}" alt="{{ $name }}">
+                </a>
+            </li>
+        @endforeach
 
         <div class="topbar-divider d-none d-sm-block"></div>
 
