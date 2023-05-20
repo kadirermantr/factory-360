@@ -16,7 +16,7 @@ return [
     'reset' => 'Parolanız sıfırlandı!',
     'sent' => 'Parola sıfırlama bağlantınız e-posta ile gönderildi!',
     'throttled' => 'Lütfen tekrar denemeden önce bekleyin.',
-    'token' => 'Parola sıfırlama adresi/kodu geçersiz.',
-    'user' => 'Bu e-posta adresi ile kayıtlı bir üye bulunmuyor.',
+    'token' => 'Parola sıfırlama belirteci geçersiz.',
+    'user' => 'Bu e-posta adresine sahip bir kullanıcı bulamıyoruz.',
 
 ];

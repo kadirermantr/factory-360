@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'failed' => 'Girilmiş olan kullanıcı verileri sistemdekiler ile eşleşmemektedir.',
-    'password' => 'Belirtilen şifre yanlış.',
-    'throttle' => 'Çok fazla oturum açma girişiminde bulundunuz. Lütfen :seconds saniye sonra tekrar deneyiz.',
+    'failed' => 'Bu kimlik bilgileri kayıtlarımızla eşleşmiyor.',
+    'password' => 'Belirtilen parola yanlış.',
+    'throttle' => 'Çok fazla giriş denemesi. Lütfen :seconds saniye sonra tekrar deneyin.',
     'forgot_password' => 'Parolanı mı unuttun?',
     'login' => 'Giriş',
     'forgot_password_description' => 'Size bir şifre sıfırlama e-postası gönderelim.',
