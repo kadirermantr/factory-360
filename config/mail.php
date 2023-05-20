@@ -55,6 +55,9 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
         ],
 
         'sendmail' => [
