@@ -24,7 +24,7 @@ class Company extends Model
      * @var array
      */
     protected $casts = [
-        'create d_at' => 'date:Y-m-d',
+        'created_at' => 'date:Y-m-d',
         'updated_at' => 'date:Y-m-d',
     ];
 
