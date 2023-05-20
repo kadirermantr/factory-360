@@ -19,4 +19,4 @@ composer install
 
 **Email:** `test@test.com`
 
-**Password:** `p@ssw0rd`
+**Password:** `password`
