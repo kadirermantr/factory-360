@@ -82,7 +82,7 @@ return [
 
     'languages' => [
         'en' => 'English',
-        'tr' => 'Türkçe',
+        'tr' => 'Turkish',
     ],
 
     /*
