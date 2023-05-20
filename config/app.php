@@ -81,6 +81,7 @@ return [
     */
 
     'languages' => [
+        'de' => 'German',
         'en' => 'English',
         'tr' => 'Turkish',
     ],

@@ -29,6 +29,12 @@
         </li>
 
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('language', 'de') }}" alt="German">
+                <img src="{{ url('img/german-flag.png') }}">
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('language', 'tr') }}" alt="Turkish">
                 <img src="{{ url('img/turkish-flag.png') }}">
             </a>
