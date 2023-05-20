@@ -3,7 +3,7 @@
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\IndustryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/auth.php';
 
-Route::get('lang/{locale}', [HomeController::class, 'lang'])->name('language');
+Route::get('lang/{locale}', [LanguageController::class, 'switch'])->name('language');
 
 Route::middleware('guest')->group(function () {
     Route::view('/', 'auth.login');

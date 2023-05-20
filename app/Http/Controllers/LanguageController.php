@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
 
-class HomeController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Set language.
@@ -13,7 +13,7 @@ class HomeController extends Controller
      * @param $locale
      * @return RedirectResponse
      */
-    public function lang($locale)
+    public function switch($locale)
     {
         App::setLocale($locale);
 
