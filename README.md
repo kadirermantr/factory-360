@@ -18,4 +18,5 @@ composer install
 ## Example User
 
 **Email:** `test@test.com`
+
 **Password:** `password`
