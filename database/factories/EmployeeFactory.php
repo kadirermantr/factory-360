@@ -20,7 +20,7 @@ class EmployeeFactory extends Factory
         return [
             'firstname' => fake()->firstName,
             'lastname' => fake()->lastName,
-            'position' => fake()->text(10),
+            'position' => ucfirst(fake()->word),
             'gender' => fake()->randomElement(EmployeeGender::cases()),
             'status' => fake()->randomElement(EmployeeStatus::cases()),
             'company_id' => fake()->numberBetween(1, 5),
