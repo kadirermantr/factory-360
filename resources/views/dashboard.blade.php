@@ -23,6 +23,4 @@
 
         <div class="card-body">{{ __('terms.description') }}</div>
     </div>
-
-
 @endsection
