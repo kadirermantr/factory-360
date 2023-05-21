@@ -80,15 +80,12 @@
                     </div>
 
                     <div class="col-sm-4 py-1">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="male" value="male"  @if ($employee->gender == 'male') checked @endif />
-                            <label class="form-check-label" for="male">{{ __('terms.male') }}</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="female" value="female" @if ($employee->gender == 'female') checked @endif />
-                            <label class="form-check-label" for="female">{{ __('terms.female') }}</label>
-                        </div>
+                        @foreach($genders as $gender)
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="{{ $gender }}" value="{{ $gender }}"  @if (($employee->gender)->value == $gender->value) checked @endif />
+                                <label class="form-check-label" for="{{ $gender }}">{{ __("terms.$gender->value") }}</label>
+                            </div>
+                        @endforeach
                     </div>
 
                     @error('gender')
@@ -102,20 +99,12 @@
                     </div>
 
                     <div class="col-sm-4 py-1">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="status" id="invited" value="invited"  @if ($employee->status == 'invited') checked @endif />
-                            <label class="form-check-label" for="invited">{{ __('terms.invited') }}</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="status" id="passive" value="passive"  @if ($employee->status == 'passive') checked @endif />
-                            <label class="form-check-label" for="passive">{{ __('terms.passive') }}</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="status" id="active" value="active" @if ($employee->status == 'active') checked @endif />
-                            <label class="form-check-label" for="active">{{ __('terms.active') }}</label>
-                        </div>
+                        @foreach($statuses as $status)
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="{{ $status }}" value="{{ $status }}"  @if (($employee->status)->value == $status->value) checked @endif />
+                                <label class="form-check-label" for="{{ $status }}">{{ __("terms.$status->value") }}</label>
+                            </div>
+                        @endforeach
                     </div>
 
                     @error('gender')

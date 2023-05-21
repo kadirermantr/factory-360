@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\EmployeeGender;
+use App\Enums\EmployeeStatus;
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Company;
 use App\Models\Employee;
@@ -38,6 +40,8 @@ class EmployeeController extends Controller
         return view('employee.show', [
             'employee' => $employee,
             'companies' => Company::all('id', 'name'),
+            'genders' => EmployeeGender::cases(),
+            'statuses' => EmployeeStatus::cases(),
         ]);
     }
 
