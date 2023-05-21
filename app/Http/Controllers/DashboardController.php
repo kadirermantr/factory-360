@@ -26,18 +26,22 @@ class DashboardController extends Controller
     {
         return [
             [
+                'page' => route('user.index'),
                 'title' => __('terms.users'),
                 'count' => User::count('id')
             ],
             [
+                'page' => route('company.index'),
                 'title' => __('terms.companies'),
                 'count' => Company::count('id')
             ],
             [
+                'page' => route('industry.index'),
                 'title' => __('terms.industries'),
                 'count' => Industry::count('id')
             ],
             [
+                'page' => route('employee.index'),
                 'title' => __('terms.employees'),
                 'count' => Employee::count('id')
             ],
