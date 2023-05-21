@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Enums\EmployeeGenders;
+use App\Enums\EmployeeGender;
 use App\Enums\EmployeeStatus;
 use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -21,7 +21,7 @@ class EmployeeFactory extends Factory
             'firstname' => fake()->firstName,
             'lastname' => fake()->lastName,
             'position' => fake()->text(10),
-            'gender' => fake()->randomElement(EmployeeGenders::cases()),
+            'gender' => fake()->randomElement(EmployeeGender::cases()),
             'status' => fake()->randomElement(EmployeeStatus::cases()),
             'company_id' => fake()->numberBetween(1, 5),
             'phone' => fake()->phoneNumber,

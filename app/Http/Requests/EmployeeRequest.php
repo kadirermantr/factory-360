@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\EmployeeGenders;
+use App\Enums\EmployeeGender;
 use App\Enums\EmployeeStatus;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -28,7 +28,7 @@ class EmployeeRequest extends FormRequest
             'lastname' => 'required|alpha|min:2',
             'position' => 'nullable',
             'company_id' => 'required|exists:companies,id',
-            'gender' => ['nullable', new Enum(EmployeeGenders::class)],
+            'gender' => ['nullable', new Enum(EmployeeGender::class)],
             'status' => ['nullable', new Enum(EmployeeStatus::class)],
             'phone' => 'nullable|numeric',
             'email' => ['required', 'email', Rule::unique('employees')->ignore($this->employee)],
