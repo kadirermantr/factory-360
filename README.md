@@ -1,4 +1,4 @@
-# Factory
+# Factory 360
 
 - **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
