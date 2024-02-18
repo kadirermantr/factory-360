@@ -1,5 +1,6 @@
 # Factory 360
 
+- **Tech Stack:** [Tech Stack File](https://github.com/kadirermantr/factory-360/blob/main/techstack.md)
 - **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
 - **Package:** [toastr](https://github.com/CodeSeven/toastr)
