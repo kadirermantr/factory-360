@@ -3,7 +3,7 @@
 - **Tech Stack:** [Tech Stack File](https://github.com/kadirermantr/factory-360/blob/main/techstack.md)
 - **Programming Language:** PHP
 - **Framework:** Laravel, Bootstrap
-- **Package:** [toastr](https://github.com/CodeSeven/toastr)
+- **Package:** [toastr](https://github.com/CodeSeven/toastr), [Pulse](https://github.com/laravel/pulse)
 - **Theme:** [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2)
 - **Available languages:** English, German, Turkish
 
